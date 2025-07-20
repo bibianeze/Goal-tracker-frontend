@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:2000/api/goals"; // adjust if needed
+const BASE_URL = "https://goal-tracker-backend-wdji.onrender.com/api/goals"; // adjust if needed
 
 export const fetchGoals = () => axios.get(BASE_URL);
 export const createGoal = (goal) => axios.post(BASE_URL, goal);
