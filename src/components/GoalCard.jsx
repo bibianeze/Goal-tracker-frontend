@@ -23,6 +23,7 @@ export default function GoalCard({ goal, onUpdate }) {
             type="checkbox"
             checked={goal.completed}
             onChange={toggleCompleted}
+            className="cursor-pointer"
           />
           <span
             className={`font-semibold text-lg ${
@@ -40,13 +41,13 @@ export default function GoalCard({ goal, onUpdate }) {
       <div className="flex flex-col gap-2">
         <button
           onClick={() => navigate(`/edit/${goal._id}`)}
-          className="text-blue-600 hover:underline"
+          className="text-blue-600 cursor-pointer hover:underline"
         >
           ✏️ Edit
         </button>
         <button
           onClick={handleDelete}
-          className="text-red-600 hover:underline"
+          className="text-red-600 cursor-pointer hover:underline"
         >
           🗑️ Delete
         </button>

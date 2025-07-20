@@ -45,7 +45,7 @@ export default function EditGoal() {
           />
           Mark as completed
         </label>
-        <button className="bg-green-600 text-white px-4 py-2 rounded">
+        <button className="bg-green-600 cursor-pointer text-white px-4 py-2 rounded">
           Save Changes
         </button>
       </form>

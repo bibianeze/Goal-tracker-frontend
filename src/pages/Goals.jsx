@@ -8,7 +8,8 @@ export default function Goals() {
 
   const getAllGoals = async () => {
     const res = await fetchGoals();
-    setGoals(res.data);
+    setGoals(res.data.goals);
+     console.log("Fetched goals response:", res);
   };
 
   useEffect(() => {
@@ -41,7 +42,7 @@ export default function Goals() {
           value={form.description}
           onChange={(e) => setForm({ ...form, description: e.target.value })}
         />
-        <button className="bg-blue-600 text-white px-4 py-2 rounded">
+        <button className="bg-blue-600 cursor-pointer text-white px-4 py-2 rounded">
           Add Goal
         </button>
       </form>
